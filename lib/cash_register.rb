@@ -29,6 +29,9 @@ class CashRegister
    def void_last_transaction
       # I used a 2D array of all the items for my last_transaction attribute.  This logic picks the last item in the array and then selects the second item in the nested array (which is the price) and then multiplies it by the qty in case the last transaction was something with more than 1 qty)
       self.total = self.total - (self.last_transaction[-1][1] * self.last_transaction[-1][2])
+      self.last_transaction[-1][2].times do 
+         self.items.pop
+      end
    end
 
 end  
