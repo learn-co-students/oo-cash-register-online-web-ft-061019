@@ -1,4 +1,3 @@
-require 'pry'
 class CashRegister
     attr_accessor :total, :discount, :cart, :last_transaction
     def initialize(discount=0)
